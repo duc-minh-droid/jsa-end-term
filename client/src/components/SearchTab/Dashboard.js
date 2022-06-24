@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Player from "./Player";
+import Player from "../../music/Player/Player";
 import TrackSearchResult from "./TrackSearchResult";
 import { Container, Form } from "react-bootstrap";
 import axios from "axios";

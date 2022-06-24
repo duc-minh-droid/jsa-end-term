@@ -5,7 +5,6 @@ export default function Player({ accessToken, trackUri }) {
   const [play, setPlay] = useState(false)
 
   useEffect(() => setPlay(true), [trackUri])
-
   if (!accessToken) return null
   return (
     <SpotifyPlayer
@@ -16,6 +15,7 @@ export default function Player({ accessToken, trackUri }) {
       }}
       play={play}
       uris={trackUri ? [trackUri] : []}
+      magnifySliderOnHover={true}
     />
   )
 }
