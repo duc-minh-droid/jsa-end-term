@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../layout/Layout'
-import Home from '../components/MainTab/Home'
+import Home from '../components/HomeTab/Home'
 
 function HomeTab() {
   return (

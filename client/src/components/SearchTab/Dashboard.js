@@ -6,7 +6,7 @@ import axios from "axios";
 import { spotifyApi } from "../../spotify/spotifyApi";
 
 export default function Dashboard({ accessToken }) {
-  window.history.pushState({}, null, "/")
+  // window.history.pushState({}, null, "/")
 
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
