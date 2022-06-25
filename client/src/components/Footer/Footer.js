@@ -41,7 +41,9 @@ function Footer() {
                 <div className="social-links">
                   <a target={'_blank'} rel={'noreferrer'} href={"https://github.com/duc-minh-droid"}><AiFillGithub className='link-button'/></a>
                   <a target={'_blank'} rel={'noreferrer'} href={"https://www.facebook.com/people/Duc-Minh-Ng/100078227723246/"}><FaFacebook className='link-button'/></a>
-                  <a target={'_blank'} rel={'noreferrer'} href={"https://www.linkedin.com/in/duc-minh30122005/"}><FaLinkedinIn className='link-button'/></a>
+                  <a target={'_blank'} rel={'noreferrer'} href={"https://www.linkedin.com/in/duc-minh30122005/"}>
+                    <FaLinkedinIn className='link-button' size="2" />
+                  </a>
                 </div>
               </div>
             </div>

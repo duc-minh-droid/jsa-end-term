@@ -1,0 +1,60 @@
+.loginContainer {
+    height: 100vh;
+    width: 100vw;
+    background-color: #1db945;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 16px;
+    gap: 20px;
+}
+
+.loginBox {
+    border: 5px solid #FCC201;
+    border-radius: 16px;
+    padding: 10px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    color: #FCC201;
+    background-color: #FFECC2;
+}
+
+.loginIcon {
+    font-size: 64px;
+    margin-left: 20px;
+    transform: scale(2);
+}
+
+.loginDesc {
+    background-color: #C5DBFF;
+    color: #0B63E6;
+    border: 5px solid #0B63E6;
+}
+
+.loginCheck .loginIcon,
+.loginDesc .loginIcon {
+    font-size: 92px;
+}
+
+.loginCheck {
+    background-color: #B8D8C8;
+    color: #198753;
+    border: 5px solid #198753;
+}
+
+.loginForm img {
+    height: 80px;
+    width: 230px;
+}

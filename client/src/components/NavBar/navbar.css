@@ -3,3 +3,8 @@
     flex-direction: row;
     gap: 20px;
 }
+
+.my-navbar ul img {
+    height: 30px;
+    width: 80px;
+}

@@ -1,10 +1,16 @@
-import {NavLink} from "react-router-dom";
+import {NavLink, Link} from "react-router-dom";
+import Logout from "../LogOut/Logout";
 import './navbar.css'
 
 function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light my-navbar">
       <ul className="navbar-nav mr-auto">
+        <li>
+          <Link to="/" className="nav-link">
+            <img src='https://iili.io/jHxmLN.png' alt='logo'/>
+          </Link>
+        </li>
         <li>
           <NavLink to="/" className="nav-link">
             Home
@@ -31,6 +37,10 @@ function NavBar() {
           </NavLink>
         </li>
       </ul>
+
+      <div>
+        <Logout />
+      </div>
     </nav>
   );
 }

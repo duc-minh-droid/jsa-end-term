@@ -78,7 +78,11 @@ function Layout({ children }) {
       <SpotifyApiContext.Provider value={token}>
         {children}
       </SpotifyApiContext.Provider>
-      {location==="/search"?null:<Footer />}
+      {auth && (
+        <div>
+          {location==="/search"?null:<Footer />}
+        </div>
+      )}
     </div>
   );
 }
