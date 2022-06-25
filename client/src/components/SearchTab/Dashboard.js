@@ -71,7 +71,7 @@ export default function Dashboard({ accessToken }) {
   }, [search, accessToken]);
 
   return (
-    <Container className="searchContainer">
+    <div className="searchContainer">
       <Form.Control
         type="search"
         placeholder="Search Songs/Artists"
@@ -88,7 +88,7 @@ export default function Dashboard({ accessToken }) {
           />
         ))}
         {searchResults.length === 0 && (
-          <div className="text-center" style={{ whiteSpace: "pre", color: "#FFFFFF" }}>
+          <div className="text-center" style={{ whiteSpace: "pre", color: "#FFFFFF", marginTop: '50px' }}>
             {lyrics}
           </div>
         )}
@@ -96,6 +96,6 @@ export default function Dashboard({ accessToken }) {
       <div className="searchPlayer">
         <Player accessToken={accessToken} trackUri={playingTrack?.uri} />
       </div>
-    </Container>
+    </div>
   );
 }

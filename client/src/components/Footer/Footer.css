@@ -86,6 +86,7 @@
 
 .footer-col .social-links .link-button:last-child {
     /* cho no be hon  */
+    font-size: 0.1px;
 }
 
 body {
