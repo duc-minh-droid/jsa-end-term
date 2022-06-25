@@ -27,6 +27,7 @@ export default function Player({ accessToken, trackUri }) {
           sliderTrackColor: '#B3B3B3',
           sliderHandleColor: '#FFFFFF',
         }}
+        initialVolume={0.5}
       />
     </div>
   )
