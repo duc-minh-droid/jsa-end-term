@@ -6,6 +6,7 @@ function SongComponent({uri, setURI, name, artistLinks, artistNames, image}) {
     const handlePlay = ()=>{
         setURI(uri)
     }
+
   return (
       <div className='songCard'>
         <div className='songImage'>
@@ -16,12 +17,10 @@ function SongComponent({uri, setURI, name, artistLinks, artistNames, image}) {
         </div>
         <div className='songText'>
             <div>{name}</div>
-            {artistNames.length <= 2 ? artistLinks.map(artistLink=>{
-                return artistNames.map((artistName,index)=>{
-                        return <div key={index} className='SongAnchor'>
-                            <a href={artistLink} alt={artistName} target="_blank" rel='noreferrer'>{artistName}</a>
-                        </div>
-                })
+            {artistNames.length <= 2 ? artistLinks.map((artistLink, index)=>{
+                return (<div className='songAnchor' key={index}>
+                    <a href={artistLink} alt={artistNames[index]} target="_blank" rel='noreferrer'>{artistNames[index]}</a>
+                </div>)
             }): (<div>
                     <a href={artistLinks[0]} alt={artistNames[0]} target="_blank" rel='noreferrer'>{artistNames[0]}</a>
                 </div>)
