@@ -1,11 +1,16 @@
-import VnChildrenTab from './VnChildrenTab'
-import VnTest from './VnTest'
+import {useState} from 'react'
+import Cookies from 'js-cookie'
+import DamVinhHung from './DamVinhHung'
+import Player from '../../music/Player/Player'
 
 function RcmContainer() {
+  const accessToken = Cookies.get('accessToken')
+  const [playingURI, setPlayingURI] = useState("")
+
   return (
     <div>
-        <VnChildrenTab id="5cj0lLjcoR7YOSnhnX0Po5" />
-        <VnTest />
+        <DamVinhHung setURI={setPlayingURI} />
+        <Player accessToken={accessToken} trackUri={playingURI}/>
     </div>
   )
 }

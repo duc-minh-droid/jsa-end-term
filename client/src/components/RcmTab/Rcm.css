@@ -1,0 +1,13 @@
+.MusicText {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.MusicSection {
+    min-height: 420px;
+    min-width: 100vw;
+    background-color: #121212;
+    padding-top: 20px;
+}

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Player from '../../music/Player/Player'
-import DamVinhHung from './DamVinhHung'
 import Cookies from 'js-cookie'
+import Recommendations from './Recommendations'
 
 function LibraryContainer() {
   const accessToken = Cookies.get('accessToken')
@@ -9,7 +9,7 @@ function LibraryContainer() {
 
   return (
     <div>
-        <DamVinhHung setURI={setPlayingURI}/>
+        <Recommendations setURI={setPlayingURI}/>
         <Player accessToken={accessToken} trackUri={playingURI}/>
     </div>
   )
