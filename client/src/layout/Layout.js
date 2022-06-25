@@ -5,8 +5,11 @@ import { SpotifyApiContext } from "react-spotify-api";
 import Cookies from "js-cookie";
 import axios from "axios";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import Footer from "../components/Footer/Footer";
+import { useLocation } from 'react-router-dom';
 
 function Layout({ children }) {
+  const location = useLocation().pathname
   const { auth, setAuth } = useContext(AuthContext);
   const token = Cookies.get("accessToken");
   const navigate = useNavigate();
@@ -75,6 +78,7 @@ function Layout({ children }) {
       <SpotifyApiContext.Provider value={token}>
         {children}
       </SpotifyApiContext.Provider>
+      {location==="/search"?null:<Footer />}
     </div>
   );
 }

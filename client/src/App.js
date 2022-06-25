@@ -17,7 +17,7 @@ function App() {
             <Route path="search" element={<SearchTab />} />
             <Route path="recommended" element={<RcmTab />} />
             <Route path="library" element={<LibraryTab />} />
-            <Route path="user" element={<UserTab />} />
+            <Route path="profile" element={<UserTab />} />
           </Routes>
         </Router>
       </AuthContextProvider>

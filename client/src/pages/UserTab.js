@@ -1,11 +1,11 @@
 import React from "react";
 import Layout from "../layout/Layout";
-import User from "../components/UserTab/User"
+import UserContainer from "../components/UserTab/UserContainer"
 
 function UserTab() {
   return (
     <Layout>
-        <User />
+        <UserContainer />
     </Layout>
   );
 }

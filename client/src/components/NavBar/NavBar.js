@@ -26,8 +26,8 @@ function NavBar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/user" className="nav-link">
-            User
+          <NavLink to="/profile" className="nav-link">
+            Profile
           </NavLink>
         </li>
       </ul>

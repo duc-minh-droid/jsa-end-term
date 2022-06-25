@@ -1,4 +1,4 @@
-.songCard {
+.artistCard {
     min-height: 250px;
     width: 250px;
     padding: 20px;
@@ -11,14 +11,14 @@
     padding-bottom: 40px;
     transition: all 0.2s linear;
     margin-left: 50px;
-    max-height: 330px;
+    max-height: 350px;
 }
 
-.songCard:hover {
+.artistCard:hover {
     background-color: hsla(0,0%,16%);
 }
 
-.songCard .songImage {
+.artistCard .artistImage {
     display: flex;
     height: 200px;
     width: 100%;
@@ -26,32 +26,33 @@
     align-items: center;
 }
 
-.songCard img {
-    height: 100%;
-    width: 100%;
-    border-radius: 6px;
+.artistCard img {
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
     text-align: center;
 }
 
-.songText {
+.artistText {
     padding: 10px;
-    width: 250px;
+    width: 280px;
 }
 
-.songText a {
+.artistDesc {
     color: #A7A7A7;
     font-size: 14px;
     /* text-decoration: none; */
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 30px;
+    margin-top: -10px;
 }
 
-.songAnchor {
-    display: inline-block;
-}
-
-.songPlay img {
+.artistPlay img {
     position: relative;
 }
-.songPlay .playBtn {
+.artistPlay .playBtn {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -69,7 +70,7 @@
     border-radius: 50%;
 }
 
-.songCard:hover .playBtn {
+.artistCard:hover .playBtn {
     display: block;
     /* transform: scale(1); */
 }

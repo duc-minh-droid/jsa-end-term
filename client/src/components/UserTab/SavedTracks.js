@@ -6,9 +6,8 @@ import { SwiperSlide } from "swiper/react"
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
 import SongSwiper from '../../music/Swiper/SongSwiper'
-import './Rcm.css'
 
-function DamVinhHung({setURI}) {
+function SavedTrack({setURI}) {
   const accessToken = Cookies.get('accessToken')
   spotifyApi.setAccessToken(accessToken)
 
@@ -16,16 +15,16 @@ function DamVinhHung({setURI}) {
   
   useEffect(() =>{
     spotifyApi
-      .getArtistAlbums('4ht0wODL01ELRxlDYvsFad', { limit: 20 })
-      .then(res=>res.body)
-      .then(res=>res.items)
+      .getMySavedTracks()
+      .then(res=>res.body.items)
+      .then(res=>res.map(e=>e.track))
       .then(res=>setCard(res))
   },[])
 
   return (
     <div className='MusicSection'>
       <div className='MusicText'>
-        Đàm Vĩnh Hưng
+        My Saved Tracks
       </div>
 
       <SongSwiper>
@@ -33,7 +32,7 @@ function DamVinhHung({setURI}) {
           return <SwiperSlide key={i}>
             <SongComponent uri={e.uri} setURI={setURI} name={e.name}
               artistNames={e.artists?.map(i=>i.name)} artistLinks={e.artists?.map(i=>i.external_urls?.spotify)}
-              image={e.images[0].url}
+              image={e.album?.images[0].url}
             />
           </SwiperSlide>
         })}
@@ -42,4 +41,4 @@ function DamVinhHung({setURI}) {
   )
 }
 
-export default DamVinhHung
+export default SavedTrack

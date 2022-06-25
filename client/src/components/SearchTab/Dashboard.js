@@ -4,6 +4,7 @@ import TrackSearchResult from "./TrackSearchResult";
 import { Container, Form } from "react-bootstrap";
 import axios from "axios";
 import { spotifyApi } from "../../spotify/spotifyApi";
+import './Search.css'
 
 export default function Dashboard({ accessToken }) {
   // window.history.pushState({}, null, "/")
@@ -70,14 +71,15 @@ export default function Dashboard({ accessToken }) {
   }, [search, accessToken]);
 
   return (
-    <Container className="d-flex flex-column py-2" style={{ height: "100vh" }}>
+    <Container className="searchContainer">
       <Form.Control
         type="search"
         placeholder="Search Songs/Artists"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
+        className="searchBar"
       />
-      <div className="flex-grow-1 my-2" style={{ overflowY: "auto" }}>
+      <div className="searchResult" style={{ overflowY: "auto" }}>
         {searchResults.map((track) => (
           <TrackSearchResult
             track={track}
@@ -86,12 +88,12 @@ export default function Dashboard({ accessToken }) {
           />
         ))}
         {searchResults.length === 0 && (
-          <div className="text-center" style={{ whiteSpace: "pre" }}>
+          <div className="text-center" style={{ whiteSpace: "pre", color: "#FFFFFF" }}>
             {lyrics}
           </div>
         )}
       </div>
-      <div>
+      <div className="searchPlayer">
         <Player accessToken={accessToken} trackUri={playingTrack?.uri} />
       </div>
     </Container>

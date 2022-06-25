@@ -8,24 +8,22 @@ import 'swiper/swiper.min.css'
 import SongSwiper from '../../music/Swiper/SongSwiper'
 import './Rcm.css'
 
-function DamVinhHung({setURI}) {
+function NewRelease({setURI}) {
   const accessToken = Cookies.get('accessToken')
   spotifyApi.setAccessToken(accessToken)
 
   const [card, setCard] = useState([])
   
   useEffect(() =>{
-    spotifyApi
-      .getArtistAlbums('4ht0wODL01ELRxlDYvsFad', { limit: 20 })
-      .then(res=>res.body)
-      .then(res=>res.items)
+    spotifyApi.getNewReleases({ country: 'VN', limit: 20 })
+      .then(res=>res.body.albums.items)
       .then(res=>setCard(res))
   },[])
 
   return (
     <div className='MusicSection'>
       <div className='MusicText'>
-        Đàm Vĩnh Hưng
+        Mới ra mắt
       </div>
 
       <SongSwiper>
@@ -42,4 +40,4 @@ function DamVinhHung({setURI}) {
   )
 }
 
-export default DamVinhHung
+export default NewRelease

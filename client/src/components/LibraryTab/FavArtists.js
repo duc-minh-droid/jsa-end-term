@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from 'react'
 import Cookies from 'js-cookie'
 import {spotifyApi} from '../../spotify/spotifyApi'
-import SongComponent from '../../music/SongRenderer/SongComponent'
+import ArtistComponent from '../../music/ArtistRenderer/ArtistComponent'
 import { SwiperSlide } from "swiper/react"
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
 import SongSwiper from '../../music/Swiper/SongSwiper'
-import './Rcm.css'
+import './Library.css'
 
-function DamVinhHung({setURI}) {
+function FavArtists({setURI}) {
   const accessToken = Cookies.get('accessToken')
   spotifyApi.setAccessToken(accessToken)
 
@@ -16,24 +16,23 @@ function DamVinhHung({setURI}) {
   
   useEffect(() =>{
     spotifyApi
-      .getArtistAlbums('4ht0wODL01ELRxlDYvsFad', { limit: 20 })
-      .then(res=>res.body)
-      .then(res=>res.items)
+      .getMyTopArtists()
+      .then(res=>res.body.items)
       .then(res=>setCard(res))
   },[])
 
   return (
     <div className='MusicSection'>
       <div className='MusicText'>
-        Đàm Vĩnh Hưng
+        My Favourite Artists
       </div>
 
       <SongSwiper>
         {card && card.map((e,i)=>{
           return <SwiperSlide key={i}>
-            <SongComponent uri={e.uri} setURI={setURI} name={e.name}
-              artistNames={e.artists?.map(i=>i.name)} artistLinks={e.artists?.map(i=>i.external_urls?.spotify)}
-              image={e.images[0].url}
+            <ArtistComponent uri={e.uri} setURI={setURI}
+              artistName={e.name} artistLink={e.external_urls.spotify}
+              image={e.images[0].url} artistType={e.type} followerCount={e.followers.total}
             />
           </SwiperSlide>
         })}
@@ -42,4 +41,4 @@ function DamVinhHung({setURI}) {
   )
 }
 
-export default DamVinhHung
+export default FavArtists

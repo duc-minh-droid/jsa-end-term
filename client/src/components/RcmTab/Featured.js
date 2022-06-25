@@ -8,31 +8,30 @@ import 'swiper/swiper.min.css'
 import SongSwiper from '../../music/Swiper/SongSwiper'
 import './Rcm.css'
 
-function DamVinhHung({setURI}) {
+function Featured({setURI}) {
   const accessToken = Cookies.get('accessToken')
   spotifyApi.setAccessToken(accessToken)
 
   const [card, setCard] = useState([])
   
   useEffect(() =>{
-    spotifyApi
-      .getArtistAlbums('4ht0wODL01ELRxlDYvsFad', { limit: 20 })
-      .then(res=>res.body)
-      .then(res=>res.items)
+    spotifyApi.getFeaturedPlaylists({ limit : 10, offset: 1, country: 'VN', locale: 'sv_VN' })
+      .then(res=>res.body.playlists.items)
+    //   .then(res=>console.log(res))
       .then(res=>setCard(res))
   },[])
 
   return (
     <div className='MusicSection'>
       <div className='MusicText'>
-        Đàm Vĩnh Hưng
+        Dành cho bạn
       </div>
 
       <SongSwiper>
         {card && card.map((e,i)=>{
           return <SwiperSlide key={i}>
             <SongComponent uri={e.uri} setURI={setURI} name={e.name}
-              artistNames={e.artists?.map(i=>i.name)} artistLinks={e.artists?.map(i=>i.external_urls?.spotify)}
+              artistNames={["Spotify"]} artistLinks={["#"]}
               image={e.images[0].url}
             />
           </SwiperSlide>
@@ -42,4 +41,4 @@ function DamVinhHung({setURI}) {
   )
 }
 
-export default DamVinhHung
+export default Featured

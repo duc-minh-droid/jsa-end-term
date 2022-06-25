@@ -1,0 +1,20 @@
+// Get tracks in the signed in user's Your Music library
+spotifyApi.getMySavedTracks({
+    limit : 2,
+    offset: 1
+  })
+  .then(function(data) {
+    console.log('Done!');
+  }, function(err) {
+    console.log('Something went wrong!', err);
+  });
+
+/* Get followed artists */
+spotifyApi.getFollowedArtists({ limit : 1 })
+  .then(function(data) {
+      // 'This user is following 1051 artists!'
+     console.log('This user is following ', data.body.artists.total, ' artists!');
+  }, function(err) {
+    console.log('Something went wrong!', err);
+  });
+

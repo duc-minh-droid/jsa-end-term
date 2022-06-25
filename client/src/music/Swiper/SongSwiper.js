@@ -8,7 +8,7 @@ function SongSwiper({children}) {
   return (
     <>
       <Swiper
-        slidesPerView={4}
+        slidesPerView={5}
         spaceBetween={10}
         keyboard={{
           enabled: true,
