@@ -10,7 +10,7 @@ function LoginPage() {
             <img src='https://iili.io/jHxmLN.png' alt='logo'/>
                 <div className='loginCheck loginBox'>
                     <RiCheckboxCircleLine className='loginIcon'/>
-                    <p>This is asteroid - an application allows user to listen to their favourite songs and more... Login to experience the music!</p>
+                    <p>This is asteroid - an application that allows user to listen to their favourite songs and more... Login to experience the music!</p>
                 </div>
                 <div className='loginWarn loginBox'>
                     <RiVipCrownLine className='loginIcon'/>
