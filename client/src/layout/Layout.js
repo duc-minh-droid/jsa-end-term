@@ -7,6 +7,9 @@ import axios from "axios";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import { useLocation } from 'react-router-dom';
+import Player from "../music/Player/Player";
+
+export const PlayerContext = React.createContext()
 
 function Layout({ children }) {
   const location = useLocation().pathname
@@ -72,12 +75,19 @@ function Layout({ children }) {
     return () => clearInterval(interval);
   }, [refreshToken, expiresIn, setAuth, navigate]);
 
+  const [playingURI, setPlayingURI] = useState("" || [])
+
   return (
     <div>
       {auth && <NavBar />}
-      <SpotifyApiContext.Provider value={token}>
-        {children}
-      </SpotifyApiContext.Provider>
+      <PlayerContext.Provider value={setPlayingURI}>
+        <SpotifyApiContext.Provider value={token}>
+          {children}
+        </SpotifyApiContext.Provider>
+      </PlayerContext.Provider>
+      {auth && (playingURI? (<>
+        <Player accessToken={token} trackUri={playingURI} />
+              </>):null)}
       {auth && (
         <div>
           {location==="/search"?null:<Footer />}

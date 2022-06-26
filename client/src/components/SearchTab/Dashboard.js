@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Player from "../../music/Player/Player";
 import TrackSearchResult from "./TrackSearchResult";
 import { Container, Form } from "react-bootstrap";
 import axios from "axios";
 import { spotifyApi } from "../../spotify/spotifyApi";
 import './Search.css'
+import { PlayerContext } from '../../layout/Layout'
 
 export default function Dashboard({ accessToken }) {
   // window.history.pushState({}, null, "/")
@@ -13,8 +14,10 @@ export default function Dashboard({ accessToken }) {
   const [searchResults, setSearchResults] = useState([]);
   const [playingTrack, setPlayingTrack] = useState();
   const [lyrics, setLyrics] = useState("");
+  const setPlayingURI = useContext(PlayerContext)
 
   function chooseTrack(track) {
+    setPlayingURI(track?.uri)
     setPlayingTrack(track);
     setSearch("");
     setLyrics("");
@@ -94,7 +97,7 @@ export default function Dashboard({ accessToken }) {
         )}
       </div>
       <div className="searchPlayer">
-        <Player accessToken={accessToken} trackUri={playingTrack?.uri} />
+        {/* <Player accessToken={accessToken} trackUri={playingTrack?.uri} /> */}
       </div>
     </div>
   );
