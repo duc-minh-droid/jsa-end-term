@@ -1,7 +1,7 @@
 .footerContainer {
-    width: 100vw;
     height: 400px;
     background-color: #121212;
+	width: 100%;
 }
 
 .link-button {
@@ -14,20 +14,22 @@
     padding: 0;
 }
 
-.container{
-	max-width: 1170px;
+.my-container{
+	/* max-width: 1170px; */
 	margin:auto;
 }
-.row{
+.my-row{
 	display: flex;
 	flex-wrap: wrap;
 }
-.footer ul{
+.my-footer ul{
 	list-style: none;
 }
-.footer{
+.my-footer{
 	background-color: #1db945;
     padding: 70px 0;
+	padding-left: 50px;
+	margin-top: 50px;
 }
 .footer-col{
    width: 25%;
@@ -84,29 +86,13 @@
 	background-color: #ffffff;
 }
 
-.footer-col .social-links .link-button:last-child {
-    /* cho no be hon  */
-}
 
-body {
+/* body {
     position: relative;
 }
 
 footer {
     position: absolute;
     bottom: 0;
-    width: 100%;
-}
-
-/*responsive*/
-@media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
-}
-}
-@media(max-width: 574px){
-  .footer-col{
-    width: 100%;
-}
-}
+    width: 83%;
+} */

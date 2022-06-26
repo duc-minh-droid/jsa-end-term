@@ -7,7 +7,7 @@
 
 .MusicSection {
     min-height: 420px;
-    min-width: 100vw;
+    max-width: 100vw;
     background-color: #121212;
     padding-top: 20px;
 }

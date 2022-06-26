@@ -4,8 +4,8 @@ import './navbar.css'
 
 function NavBar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light my-navbar">
-      <ul className="navbar-nav mr-auto">
+    <nav className="my-navbar">
+      <ul className="">
         <li>
           <Link to="/" className="nav-link">
             <img src='https://iili.io/jHxmLN.png' alt='logo'/>

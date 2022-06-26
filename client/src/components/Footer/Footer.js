@@ -7,9 +7,9 @@ import { FaLinkedinIn, FaFacebook } from "react-icons/fa";
 function Footer() {
   return (
     <div className="footerContainer">
-      <footer className="footer">
-        <div className="container">
-          <div className="row">
+      <footer className="my-footer">
+        <div className="my-container">
+          <div className="my-row">
             <div className="footer-col">
               <h4>website</h4>
               <ul>

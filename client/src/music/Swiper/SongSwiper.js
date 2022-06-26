@@ -3,12 +3,13 @@ import { Swiper } from "swiper/react"
 import { Keyboard, Pagination } from "swiper";
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
+import './Swiper.css'
 
 function SongSwiper({children}) {
   return (
     <>
       <Swiper
-        slidesPerView={5}
+        slidesPerView={4}
         spaceBetween={10}
         keyboard={{
           enabled: true,

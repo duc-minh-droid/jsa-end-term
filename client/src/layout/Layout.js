@@ -8,6 +8,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import { useLocation } from 'react-router-dom';
 import Player from "../music/Player/Player";
+import './layout.css'
 
 export const PlayerContext = React.createContext()
 
@@ -78,13 +79,15 @@ function Layout({ children }) {
   const [playingURI, setPlayingURI] = useState("" || [])
 
   return (
-    <div>
+    <div className="content-container">
       {auth && <NavBar />}
+
       <PlayerContext.Provider value={setPlayingURI}>
         <SpotifyApiContext.Provider value={token}>
           {children}
         </SpotifyApiContext.Provider>
       </PlayerContext.Provider>
+
       {auth && (playingURI? (<>
         <Player accessToken={token} trackUri={playingURI} />
               </>):null)}
