@@ -48,14 +48,14 @@
     display: inline-block;
 }
 
-.songPlay img {
+.songPlay {
     position: relative;
 }
 .songPlay .playBtn {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-35%, -100%);
+    transform: translate(-50%, -50%);
     width: 75px;
     height: 75px;
     border: none;
