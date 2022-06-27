@@ -1,19 +1,17 @@
-import React, {useState, useContext} from 'react'
-import Player from '../../music/Player/Player'
-import Cookies from 'js-cookie'
+import React, {useContext} from 'react'
 import Recommendations from './Recommendations'
 import RecentPlayed from './RecentPlayed'
 import TopTrack from './TopTrack'
 import FavArtists from './FavArtists'
 import { PlayerContext } from '../../layout/Layout'
+import EventsBanner from './EventsBanner'
 
 function LibraryContainer() {
-  const accessToken = Cookies.get('accessToken')
-  // const [playingURI, setPlayingURI] = useState("")
   const setPlayingURI = useContext(PlayerContext)
 
   return (
     <div>
+        <EventsBanner />
         <Recommendations setURI={setPlayingURI}/>
         <RecentPlayed setURI={setPlayingURI}/>
         <TopTrack setURI={setPlayingURI}/>

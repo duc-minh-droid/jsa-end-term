@@ -7,7 +7,7 @@ import RcmTab from "./pages/RcmTab";
 import LibraryTab from "./pages/LibraryTab";
 import UserTab from "./pages/UserTab";
 import LoginPage from "./components/HomeTab/LoginPage";
-import { PrivateRoute } from "./components/RouteFunction/PrivateRoute";
+import { PrivateRoute } from "./RouteFunction/PrivateRoute";
 
 function App() {
   return (
