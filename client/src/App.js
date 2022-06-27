@@ -6,6 +6,8 @@ import SearchTab from "./pages/SearchTab";
 import RcmTab from "./pages/RcmTab";
 import LibraryTab from "./pages/LibraryTab";
 import UserTab from "./pages/UserTab";
+import LoginPage from "./components/HomeTab/LoginPage";
+import { PrivateRoute } from "./components/RouteFunction/PrivateRoute";
 
 function App() {
   return (
@@ -13,11 +15,14 @@ function App() {
       <AuthContextProvider>
         <Router>
           <Routes>
-            <Route path="/" element={<HomeTab />} />
+            <Route exact path='/' element={<PrivateRoute/>}>
+              <Route exact path='/' element={<HomeTab/>}/>
+            </Route>
             <Route path="search" element={<SearchTab />} />
             <Route path="recommended" element={<RcmTab />} />
             <Route path="library" element={<LibraryTab />} />
             <Route path="profile" element={<UserTab />} />
+            <Route path="login" element={<LoginPage />} />
           </Routes>
         </Router>
       </AuthContextProvider>

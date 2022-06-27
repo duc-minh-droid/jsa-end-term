@@ -14,12 +14,12 @@ function Logout() {
   const logOutHandler = () => {
     setLogin(false)
     Cookies.remove('accessToken')
-    navigate('/')
+    navigate('/login')
   }
 
   return (
     <div>
-        <button type="button" className="btn btn-success" onClick={logOutHandler}>Log Out</button>
+        <button type="button" className="logout-btn" onClick={logOutHandler}>Log Out</button>
     </div>
   )
 }

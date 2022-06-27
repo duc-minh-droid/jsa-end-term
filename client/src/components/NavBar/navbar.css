@@ -1,21 +1,72 @@
 .my-navbar ul {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     list-style: none;
 }
 
 .my-navbar ul img {
-    height: 30px;
-    width: 80px;
+    height: 50px;
+    width: 140px;
+    margin-left:-10px;
+}
+
+.my-navbar ul li a {
+    color: #181818;
+    font-size: 20px;
 }
 
 .my-navbar {
     width: 15%;
     height: 100%;
-    background-color: black;
+    background-color: white;
     position: fixed;
     left: 0;
     z-index: 2;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.my-navbar .active {
+    background-color: #1db945;
+    margin-right: -20px;
+    border-radius: 32px 0 0 32px;
+    padding: 20px;
+    border: 4px solid #181818;
+    border-right: none;
+}
+
+.logout-btn {
+    background-color: #1db945;
+    border-radius: 32px;
+    padding: 20px;
+    border: 4px solid #181818;
+    font-size: 28px;
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s linear;
+}
+
+.logout-btn:hover {
+    background-color: #181818;
+    border-color: #1db945;
+    color: #1db945;
+}
+
+.logout-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-section {
+    display: flex;
+    justify-content: stretch;
+    gap: 20px;
+    align-items: center;
 }

@@ -2,8 +2,12 @@ import React from 'react'
 import Login from './Login'
 import './Home.css'
 import { RiVipCrownLine, RiInformationLine, RiCheckboxCircleLine } from "react-icons/ri"
+import { useNavigate } from 'react-router-dom'
 
 function LoginPage() {
+    const navigate = useNavigate()
+    navigate('/login')
+
   return (
     <div className='loginContainer'>
         <div className='loginForm'>
