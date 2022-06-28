@@ -1,5 +1,8 @@
 import React from 'react'
 import './Home.css'
+import gif1 from '../../assets/gif/gif1.gif'
+import gif2 from '../../assets/gif/gif2.gif'
+import gif3 from '../../assets/gif/gif3.gif'
 
 function GifSection() {
   return (
@@ -7,7 +10,7 @@ function GifSection() {
         <div className="gif-section">
             <div className="gif-container">
                 <div className="gif-content">
-                    <img src='https://picsum.photos/400' alt='error' />
+                    <img src={gif1} style={{height:'450px', width:'450px'}} alt='error' />
                 </div>
                 <div className="gif-text">
                     <h2>Listen to a personalized mix of tracks</h2>
@@ -29,7 +32,7 @@ function GifSection() {
         <div className="gif-section gif-odd">
             <div className="gif-container gif-flex-odd">
                 <div className="gif-content">
-                    <img src='https://picsum.photos/400' alt='error' />
+                    <img src={gif2} style={{height:'450px', width:'450px'}} alt='error' />
                 </div>
                 <div className="gif-text">
                     <h2>We cure your taste of music</h2>
@@ -51,7 +54,7 @@ function GifSection() {
         <div className="gif-section gif-even">
             <div className="gif-container">
                 <div className="gif-content">
-                    <img src='https://picsum.photos/400' alt='error' />
+                    <img src={gif3} style={{height:'450px', width:'450px'}} alt='error' />
                 </div>
                 <div className="gif-text">
                     <h2>Get ready for seamless online music</h2>

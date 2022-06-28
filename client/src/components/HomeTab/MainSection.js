@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css'
 import IntroVideo from '../../assets/video/IntroVideo'
+import rec from '../../assets/image/Home/rectangle2.jpg'
 
 function MainSection() {
   return (
@@ -25,7 +26,7 @@ function MainSection() {
                 <p>Intuitive. Powerful. Runs everywhere</p>
             </div>
             <div className="image-container">
-                <img src='https://picsum.photos/800/500' alt='' />
+                <img src={rec} alt='' style={{height:'500px', width:'800px'}}/>
             </div>
         </div>
     </div>

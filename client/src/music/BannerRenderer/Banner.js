@@ -3,12 +3,12 @@ import './Banner.css'
 import { AiFillCompass } from 'react-icons/ai'
 
 function Banner({image, title, desc}) {
-    const imageSrc = `../../assets/Library/${image}`
+    // const imageSrc = require(`../../assets/Library/${image}`)
 
   return (
     <div className='BannerContainer'>
         <div className='EventContainer'>
-            <img src='https://picsum.photos/200/300' alt={image} />
+            <img src={image} alt={image} />
         </div>
         <div className='EdescContainer'>
             <div className='EtextContainer'>
