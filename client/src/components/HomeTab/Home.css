@@ -110,6 +110,10 @@
     margin-bottom: 20px;
 }
 
+.gif-even {
+    background-color: #3498db;
+}
+
 .gif-even .gif-list img {
     width: 70px;
     height: 70px;
@@ -166,6 +170,7 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    background-color: #34495e;
 }
 
 .third-section {
