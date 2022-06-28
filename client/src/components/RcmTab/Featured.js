@@ -24,7 +24,7 @@ function Featured({setURI}) {
   return (
     <div className='MusicSection'>
       <div className='MusicText'>
-        Dành cho bạn
+        Xu hướng
       </div>
 
       <SongSwiper>

@@ -8,7 +8,8 @@ import EventsBanner from './EventsBanner'
 
 function LibraryContainer() {
   const setPlayingURI = useContext(PlayerContext)
-
+  window.scrollTo(0, 0)
+  
   return (
     <div>
         <EventsBanner />

@@ -1,5 +1,4 @@
 import {useContext} from 'react'
-import Cookies from 'js-cookie'
 import DamVinhHung from './DamVinhHung'
 import NewRelease from './NewRelease'
 import RcmVN from './RcmVN'
@@ -7,13 +6,15 @@ import Featured from './Featured'
 import PopVN from './PopVN'
 import { PlayerContext } from '../../layout/Layout'
 import ArtistBanner from './ArtistBanner'
+import DashboardRcm from './DashboardRcm'
 
 function RcmContainer() {
-  const accessToken = Cookies.get('accessToken')
   const setPlayingURI = useContext(PlayerContext)
+  window.scrollTo(0, 0)
 
   return (
     <div>
+        <DashboardRcm />
         <Featured setURI={setPlayingURI}/>
         <NewRelease setURI={setPlayingURI}/>
         <RcmVN setURI={setPlayingURI}/>
