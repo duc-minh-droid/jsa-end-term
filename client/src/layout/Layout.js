@@ -88,9 +88,8 @@ function Layout({ children }) {
         </SpotifyApiContext.Provider>
       </PlayerContext.Provider>
 
-      {auth && (playingURI? (<>
-        <Player accessToken={token} trackUri={playingURI} />
-              </>):null)}
+      {auth && (<><Player accessToken={token} trackUri={playingURI} /></>)}
+
       {auth && (
         <div>
           {location==="/search"?null:<Footer />}
