@@ -1,0 +1,4 @@
+1. fix letter spacing in artist names in songRenderer
+2. fix Swiper library in Library/events
+3. add a scrolling effect on elements in Home
+4. fix player being rerendered whenever tab changes
