@@ -5,8 +5,6 @@ const bodyParser = require("body-parser");
 const lyricsFinder = require("lyrics-finder");
 const SpotifyWebApi = require("spotify-web-api-node");
 
-// trigger
-
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
