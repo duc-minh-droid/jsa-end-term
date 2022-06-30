@@ -27,7 +27,7 @@ export default function Dashboard({ accessToken }) {
     if (!playingTrack) return;
 
     axios
-      .get("http://localhost:3001/lyrics", {
+      .get("https://serverx.up.railway.app/lyrics", {
         params: {
           track: playingTrack.title,
           artist: playingTrack.artist,

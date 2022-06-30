@@ -8,7 +8,7 @@ export default function useAuth(code) {
 
   useEffect(() => {
     axios
-      .post("http://localhost:3001/login", {code})
+      .post("https://serverx.up.railway.app/login", {code})
       .then(res => {
         setAccessToken(res.data.accessToken)
         setRefreshToken(res.data.refreshToken)
@@ -26,7 +26,7 @@ export default function useAuth(code) {
 
     const interval = setInterval(() => {
       axios
-        .post("http://localhost:3001/refresh", {
+        .post("https://serverx.up.railway.app/refresh", {
           refreshToken,
         })
         .then(res => {

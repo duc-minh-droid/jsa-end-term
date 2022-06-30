@@ -31,7 +31,7 @@ function Layout({ children }) {
 
     if (!code) return;
     axios
-      .post("http://localhost:3001/login", { code })
+      .post("https://serverx.up.railway.app/login", { code })
       .then((res) => {
         setRefreshToken(res.data.refreshToken);
         setExpiresIn(res.data.expiresIn);
@@ -57,7 +57,7 @@ function Layout({ children }) {
 
     const interval = setInterval(() => {
       axios
-        .post("http://localhost:3001/refresh", {
+        .post("https://serverx.up.railway.app/refresh", {
           refreshToken,
         })
         .then((res) => {
