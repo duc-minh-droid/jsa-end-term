@@ -10,6 +10,9 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/',(req,res)=>{
+  res.send('Hello world')
+})
 app.post("/refresh", (req, res) => {
   const refreshToken = req.body.refreshToken;
   const spotifyApi = new SpotifyWebApi({
@@ -64,4 +67,8 @@ app.get("/lyrics", async (req, res) => {
   res.json({ lyrics });
 });
 
-app.listen(3001);
+let port = process.env.PORT || 3001
+
+app.listen(port, () => {
+  console.log(`Listening on http://localhost:${port}/`);
+});
