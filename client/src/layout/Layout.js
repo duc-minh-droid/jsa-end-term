@@ -9,10 +9,12 @@ import Footer from "../components/Footer/Footer";
 import { useLocation } from 'react-router-dom';
 import Player from "../music/Player/Player";
 import './layout.css'
+import SwiperCore, { Autoplay } from 'swiper';
 
 export const PlayerContext = React.createContext()
 
 function Layout({ children }) {
+  SwiperCore.use([Autoplay]);
   const location = useLocation().pathname
   const { auth, setAuth } = useContext(AuthContext);
   const token = Cookies.get("accessToken");

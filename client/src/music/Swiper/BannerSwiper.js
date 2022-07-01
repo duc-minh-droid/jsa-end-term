@@ -13,7 +13,8 @@ export default function BannerSwiper({children}) {
           dynamicBullets: true,
         }}
         modules={[Pagination, Autoplay]}
-        autoplay={{delay: 3000}}
+        autoplay={{delay: 4000}}
+        speed={1000}
       >
         {children}
       </Swiper>
