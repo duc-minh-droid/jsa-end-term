@@ -3,7 +3,7 @@ import Recommendations from './Recommendations'
 import RecentPlayed from './RecentPlayed'
 import TopTrack from './TopTrack'
 import FavArtists from './FavArtists'
-import { PlayerContext } from '../../layout/Layout'
+import { PlayerContext } from '../../App'
 import EventsBanner from './EventsBanner'
 
 function LibraryContainer() {

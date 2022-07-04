@@ -1,3 +1,3 @@
-1. fix letter spacing in artist names in songRenderer
+1. fix player being delayed 
+
 2. add a scrolling effect on elements in Home
-3. fix player being rerendered whenever tab changes <!important!>

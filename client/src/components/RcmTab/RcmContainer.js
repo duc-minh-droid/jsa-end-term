@@ -4,7 +4,7 @@ import NewRelease from './NewRelease'
 import RcmVN from './RcmVN'
 import Featured from './Featured'
 import PopVN from './PopVN'
-import { PlayerContext } from '../../layout/Layout'
+import { PlayerContext } from '../../App'
 import ArtistBanner from './ArtistBanner'
 import DashboardRcm from './DashboardRcm'
 

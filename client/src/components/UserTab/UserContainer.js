@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import UserProfile from './UserProfile'
 import SavedTracks from './SavedTracks'
-import { PlayerContext } from '../../layout/Layout'
+import { PlayerContext } from '../../App'
 import MyArtists from './MyArtists'
 
 function UserContainer() {

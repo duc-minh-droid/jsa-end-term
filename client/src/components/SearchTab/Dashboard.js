@@ -1,11 +1,10 @@
 import { useState, useEffect, useContext } from "react";
-import Player from "../../music/Player/Player";
 import TrackSearchResult from "./TrackSearchResult";
-import { Container, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import axios from "axios";
 import { spotifyApi } from "../../spotify/spotifyApi";
 import './Search.css'
-import { PlayerContext } from '../../layout/Layout'
+import { PlayerContext } from '../../App'
 
 export default function Dashboard({ accessToken }) {
   // window.history.pushState({}, null, "/")

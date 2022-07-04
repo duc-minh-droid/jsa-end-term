@@ -1,11 +1,11 @@
 .songCard {
-    min-height: 250px;
+    min-height: 352px;
     width: 250px;
     padding: 20px;
     background-color: #181818;
     color: #FFFFFF;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     border-radius: 6px;
     padding-bottom: 40px;
@@ -72,4 +72,14 @@
 .songCard:hover .playBtn {
     display: block;
     /* transform: scale(1); */
+}
+
+.songName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.songAnchor {
+    margin-right: 4px;
 }

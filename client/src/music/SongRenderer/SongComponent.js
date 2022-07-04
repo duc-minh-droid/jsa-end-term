@@ -16,7 +16,7 @@ function SongComponent({uri, setURI, name, artistLinks, artistNames, image}) {
             </div>
         </div>
         <div className='songText'>
-            <div>{name}</div>
+            <div className='songName'>{name}</div>
             {artistNames.length <= 2 ? artistLinks.map((artistLink, index)=>{
                 return (<div className='songAnchor' key={index}>
                     <a href={artistLink} alt={artistNames[index]} target="_blank" rel='noreferrer'>{artistNames[index]}</a>

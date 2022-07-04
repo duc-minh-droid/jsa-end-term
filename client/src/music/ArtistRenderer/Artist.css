@@ -74,3 +74,9 @@
     display: block;
     /* transform: scale(1); */
 }
+
+.artistName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

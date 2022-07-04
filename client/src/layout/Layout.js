@@ -7,13 +7,11 @@ import axios from "axios";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import { useLocation } from 'react-router-dom';
-import Player from "../music/Player/Player";
 import './layout.css'
 import SwiperCore, { Autoplay } from 'swiper';
 
-export const PlayerContext = React.createContext()
-
 function Layout({ children }) {
+
   SwiperCore.use([Autoplay]);
   const location = useLocation().pathname
   const { auth, setAuth } = useContext(AuthContext);
@@ -41,6 +39,7 @@ function Layout({ children }) {
         Cookies.set("accessToken", res.data.accessToken, {
           expires: res.data.expiresIn,
         });
+
         setSearchParams({});
       })
       .catch((err) => {
@@ -78,19 +77,13 @@ function Layout({ children }) {
     return () => clearInterval(interval);
   }, [refreshToken, expiresIn, setAuth, navigate]);
 
-  const [playingURI, setPlayingURI] = useState("" || [])
-
   return (
     <div className="content-container">
       {auth && <NavBar />}
 
-      <PlayerContext.Provider value={setPlayingURI}>
         <SpotifyApiContext.Provider value={token}>
           {children}
         </SpotifyApiContext.Provider>
-      </PlayerContext.Provider>
-
-      {auth && (<><Player accessToken={token} trackUri={playingURI} /></>)}
 
       {auth && (
         <div>

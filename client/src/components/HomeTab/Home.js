@@ -1,6 +1,5 @@
 import { useContext } from 'react'
 import { AuthContext } from '../../context/AuthContext'
-import LoginPage from './LoginPage'
 import HomePage from './HomePage'
 import { useNavigate, Navigate } from 'react-router-dom'
 

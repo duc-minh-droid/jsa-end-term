@@ -59,9 +59,14 @@
     font-weight: 700;
     cursor: pointer;
     transition: all 0.2s linear;
+    color: #181818
 }
 
 .EventButton:hover {
     background-color: #181818;
     color: #1db945;
+}
+
+a {
+    text-decoration: none;
 }
