@@ -16,7 +16,7 @@ export const PlayerContext = React.createContext();
 function App() {
   const [playingURI, setPlayingURI] = useState("");
   const location = window.location.pathname
-  console.log(location)
+  
   return (
     <div>
       <AuthContextProvider>

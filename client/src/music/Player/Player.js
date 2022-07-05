@@ -11,6 +11,7 @@ function Player({ trackUri }) {
   if (!accessToken) return null;
   return (
     <div className="player">
+      <div className="player-after"></div>
       <SpotifyPlayer
         token={accessToken}
         showSaveIcon
