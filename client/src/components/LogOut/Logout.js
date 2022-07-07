@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import Cookies from 'js-cookie'
 import { AuthContext } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-
+import { AiOutlineLogout } from 'react-icons/ai'
 function Logout() {
   const { setAuth } = useContext(AuthContext);
   const setLogin = (value) => {
@@ -19,7 +19,7 @@ function Logout() {
 
   return (
     <div>
-        <button type="button" className="logout-btn" onClick={logOutHandler}>Log Out</button>
+        <button type="button" className="logout-btn" onClick={logOutHandler}><div className='logout-icon'> <AiOutlineLogout/></div> Log Out</button>
     </div>
   )
 }

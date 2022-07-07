@@ -41,15 +41,14 @@
 .logout-btn {
     background-color: #1db945;
     border-radius: 32px;
-    padding: 20px;
+    padding: 0 10px;
     border: 4px solid #181818;
-    font-size: 28px;
-    text-align: center;
-    width: 150px;
-    height: 60px;
+    font-size: 20px;
+    height: 40px;
     display: flex;
     align-items: center;
     transition: all 0.2s linear;
+    text-align: center;
 }
 
 .logout-btn:hover {
@@ -69,4 +68,8 @@
     justify-content: stretch;
     gap: 20px;
     align-items: center;
+}
+
+.logout-icon {
+    margin-right: 10px;
 }
