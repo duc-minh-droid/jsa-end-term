@@ -1,3 +1,1 @@
-1. fix player being delayed 
-
-2. add a scrolling effect on elements in Home
+1. fix player being delayed
